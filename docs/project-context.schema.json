@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CodeQuest Project Context",
+  "type": "object",
+  "required": ["schema_version", "user_id", "language", "project", "journey", "workspace", "chat_history", "usage"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "user_id": { "type": ["integer", "null"] },
+    "language": { "enum": ["Python", "C"] },
+    "project": {
+      "type": "object",
+      "required": ["title", "idea", "requirements", "target_users", "constraints", "finalized"],
+      "properties": {
+        "title": { "type": "string", "maxLength": 120 },
+        "idea": { "type": "string", "maxLength": 3000 },
+        "requirements": { "type": "array", "items": { "type": "string", "maxLength": 300 }, "maxItems": 30 },
+        "target_users": { "type": "string", "maxLength": 300 },
+        "constraints": { "type": "array", "items": { "type": "string" } },
+        "finalized": { "type": "boolean" }
+      }
+    },
+    "journey": {
+      "type": "object",
+      "required": ["started_at", "expires_at", "current_day", "lesson_id", "lesson_step", "completed_lessons", "status"],
+      "properties": {
+        "started_at": { "type": "string", "format": "date-time" },
+        "expires_at": { "type": "string", "format": "date-time" },
+        "current_day": { "type": "integer", "minimum": 1, "maximum": 15 },
+        "lesson_id": { "type": "string" },
+        "lesson_step": { "type": "integer", "enum": [1, 2, 3] },
+        "completed_lessons": { "type": "array", "items": { "type": "string" } },
+        "status": { "enum": ["planning", "active", "completed", "expired"] }
+      }
+    },
+    "workspace": {
+      "type": "object",
+      "required": ["persistent_file_name", "code_snapshot", "last_output", "last_run_status", "updated_at"],
+      "properties": {
+        "persistent_file_name": { "type": "string" },
+        "code_snapshot": { "type": "string", "maxLength": 200000 },
+        "last_output": { "type": "string", "maxLength": 20000 },
+        "last_run_status": { "enum": ["idle", "running", "success", "error"] },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "chat_history": {
+      "type": "array", "maxItems": 100,
+      "items": { "type": "object", "required": ["role", "text"], "properties": { "role": { "enum": ["user", "assistant"] }, "text": { "type": "string", "maxLength": 4000 }, "source": { "type": "string" }, "at": { "type": "string", "format": "date-time" } } }
+    },
+    "usage": { "type": "object", "properties": { "coach_requests_today": { "type": "integer", "minimum": 0 }, "last_request_date": { "type": "string", "format": "date" } } }
+  }
+}

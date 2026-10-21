@@ -1,0 +1,12 @@
+backend/.venv/
+backend/.env
+backend/codequest.db
+frontend/node_modules/
+frontend/dist/
+*.pyc
+__pycache__/
+
+# Local frontend environment (contains deployment URLs/settings)
+frontend/.env
+Other/
+.vite/
