@@ -1,3 +1,4 @@
+HEAD
 CodeQuest — License for Original Contributions
 
 Copyright (c) 2026 Arun Prajapati
@@ -27,3 +28,20 @@ THE ORIGINAL WORK.
 
 Third-party components remain subject to their own licenses and notices. See
 `docs/THIRD_PARTY_NOTICES.md` and `LICENSES/AI_TUTOR_MIT_LICENSE.txt`.
+
+# CodeQuest License
+
+Copyright (c) 2026 Arun Prajapati
+
+This license applies only to original code and other original contributions authored by Arun Prajapati for the CodeQuest project.
+
+Third-party code, assets, and dependencies are not covered by this notice and remain subject to their respective copyright notices and license terms.
+
+See `docs/THIRD_PARTY_NOTICES.md` for third-party components and their applicable licenses.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of the original work covered by this license, to deal in that work without restriction, including the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the original work covered by this license.
+
+THE ORIGINAL WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE ORIGINAL WORK OR ITS USE.
+origin/main
